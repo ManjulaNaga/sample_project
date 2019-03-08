@@ -3,7 +3,7 @@ node {
     git 'https://github.com/ManjulaNaga/sample_project.git'
   }
   stage('maven') {
-      sh 'mvn clean package sonar:sonar'
+      sh 'mvn clean compile package sonar:sonar'
   }
   stage('SonarQube analysis') {
     // requires SonarQube Scanner 2.8+
